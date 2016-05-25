@@ -15,20 +15,20 @@ if version_info >= (2,6,0):
         import imp
         fp = None
         try:
-            fp, pathname, description = imp.find_module('_Big_IntegerDll', [dirname(__file__)])
+            fp, pathname, description = imp.find_module('_big_integer', [dirname(__file__)])
         except ImportError:
-            import _Big_IntegerDll
-            return _Big_IntegerDll
+            import _big_integer
+            return _big_integer
         if fp is not None:
             try:
-                _mod = imp.load_module('_Big_IntegerDll', fp, pathname, description)
+                _mod = imp.load_module('_big_integer', fp, pathname, description)
             finally:
                 fp.close()
             return _mod
-    _Big_IntegerDll = swig_import_helper()
+    _big_integer = swig_import_helper()
     del swig_import_helper
 else:
-    import _Big_IntegerDll
+    import _big_integer
 del version_info
 try:
     _swig_property = property
@@ -76,36 +76,36 @@ class Big_integer(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, Big_integer, name)
     __repr__ = _swig_repr
     def __init__(self, *args): 
-        this = _Big_IntegerDll.new_Big_integer(*args)
+        this = _big_integer.new_Big_integer(*args)
         try: self.this.append(this)
         except: self.this = this
-    __swig_destroy__ = _Big_IntegerDll.delete_Big_integer
+    __swig_destroy__ = _big_integer.delete_Big_integer
     __del__ = lambda self : None;
-    def GetString(self): return _Big_IntegerDll.Big_integer_GetString(self)
-    def ReadFromTextFile(self, *args): return _Big_IntegerDll.Big_integer_ReadFromTextFile(self, *args)
-    def WriteToTextFile(self, *args): return _Big_IntegerDll.Big_integer_WriteToTextFile(self, *args)
-    def ReadFromBin(self, *args): return _Big_IntegerDll.Big_integer_ReadFromBin(self, *args)
-    def WriteToBin(self, *args): return _Big_IntegerDll.Big_integer_WriteToBin(self, *args)
-    def __gt__(self, *args): return _Big_IntegerDll.Big_integer___gt__(self, *args)
-    def __ge__(self, *args): return _Big_IntegerDll.Big_integer___ge__(self, *args)
-    def __lt__(self, *args): return _Big_IntegerDll.Big_integer___lt__(self, *args)
-    def __le__(self, *args): return _Big_IntegerDll.Big_integer___le__(self, *args)
-    def __eq__(self, *args): return _Big_IntegerDll.Big_integer___eq__(self, *args)
-    def __ne__(self, *args): return _Big_IntegerDll.Big_integer___ne__(self, *args)
-    def __add__(self, *args): return _Big_IntegerDll.Big_integer___add__(self, *args)
-    def __neg__(self): return _Big_IntegerDll.Big_integer___neg__(self)
-    def __sub__(self, *args): return _Big_IntegerDll.Big_integer___sub__(self, *args)
-    def __mul__(self, *args): return _Big_IntegerDll.Big_integer___mul__(self, *args)
-    def __div__(self, *args): return _Big_IntegerDll.Big_integer___div__(self, *args)
-    def __mod__(self, *args): return _Big_IntegerDll.Big_integer___mod__(self, *args)
-    def __xor__(self, *args): return _Big_IntegerDll.Big_integer___xor__(self, *args)
-Big_integer_swigregister = _Big_IntegerDll.Big_integer_swigregister
+    def GetString(self): return _big_integer.Big_integer_GetString(self)
+    def ReadFromTextFile(self, *args): return _big_integer.Big_integer_ReadFromTextFile(self, *args)
+    def WriteToTextFile(self, *args): return _big_integer.Big_integer_WriteToTextFile(self, *args)
+    def ReadFromBin(self, *args): return _big_integer.Big_integer_ReadFromBin(self, *args)
+    def WriteToBin(self, *args): return _big_integer.Big_integer_WriteToBin(self, *args)
+    def __gt__(self, *args): return _big_integer.Big_integer___gt__(self, *args)
+    def __ge__(self, *args): return _big_integer.Big_integer___ge__(self, *args)
+    def __lt__(self, *args): return _big_integer.Big_integer___lt__(self, *args)
+    def __le__(self, *args): return _big_integer.Big_integer___le__(self, *args)
+    def __eq__(self, *args): return _big_integer.Big_integer___eq__(self, *args)
+    def __ne__(self, *args): return _big_integer.Big_integer___ne__(self, *args)
+    def __add__(self, *args): return _big_integer.Big_integer___add__(self, *args)
+    def __neg__(self): return _big_integer.Big_integer___neg__(self)
+    def __sub__(self, *args): return _big_integer.Big_integer___sub__(self, *args)
+    def __mul__(self, *args): return _big_integer.Big_integer___mul__(self, *args)
+    def __div__(self, *args): return _big_integer.Big_integer___div__(self, *args)
+    def __mod__(self, *args): return _big_integer.Big_integer___mod__(self, *args)
+    def __xor__(self, *args): return _big_integer.Big_integer___xor__(self, *args)
+Big_integer_swigregister = _big_integer.Big_integer_swigregister
 Big_integer_swigregister(Big_integer)
 
 
 def Pow(*args):
-  return _Big_IntegerDll.Pow(*args)
-Pow = _Big_IntegerDll.Pow
+  return _big_integer.Pow(*args)
+Pow = _big_integer.Pow
 # This file is compatible with both classic and new-style classes.
 
 

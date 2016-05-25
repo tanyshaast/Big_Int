@@ -2950,16 +2950,16 @@ static swig_module_info swig_module = {swig_types, 2, 0, 0, 0, 0};
 #endif
 
 /*-----------------------------------------------
-              @(target):= _Big_Integer.so
+              @(target):= _Big_integer.so
   ------------------------------------------------*/
 #if PY_VERSION_HEX >= 0x03000000
-#  define SWIG_init    PyInit__Big_Integer
+#  define SWIG_init    PyInit__Big_integer
 
 #else
-#  define SWIG_init    init_Big_Integer
+#  define SWIG_init    init_Big_integer
 
 #endif
-#define SWIG_name    "_Big_Integer"
+#define SWIG_name    "_Big_integer"
 
 #define SWIGVERSION 0x020011 
 #define SWIG_VERSION SWIGVERSION
@@ -3034,8 +3034,7 @@ namespace swig {
 }
 
 
-/* Includes the header in the wrapper code */
-#include "Big_integer.h"
+#include "./Big_integer.h"
 
 
 SWIGINTERN swig_type_info*

@@ -33,6 +33,13 @@ public:
 	bool operator==(const Big_integer& Y);
 	bool operator!=(const Big_integer& Y);
 
+	//Операторы инкриментирования и декриментирования
+	Big_integer operator++();
+	Big_integer operator++(int);
+	Big_integer operator--();
+	Big_integer operator--(int);
+
+
 	//Арифметические операторы
 
 	Big_integer& operator=(const Big_integer& RValue);
@@ -45,14 +52,6 @@ public:
 	Big_integer operator^(const Big_integer& RValue) const;
 
 private:
-
-	
-	//Операторы инкриментирования и декриментирования
-	Big_integer operator++();
-	Big_integer operator++(int);
-	Big_integer operator--();
-	Big_integer operator--(int);
-
 
 	void Set_size(int size); // устанавливает размер
 	unsigned char & operator[](int i);
